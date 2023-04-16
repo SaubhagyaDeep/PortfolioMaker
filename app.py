@@ -57,6 +57,6 @@ def upload():
     return render_template(design_name,img=img_new_name,dname = name,dlname = lastname,dsch = school, dcol = college,dph = phone,demail = email,ds1 = skill1,ds2 = skill2,ds3 =skill3,ds4 = skill4,dabout = about,dgit=git,dlinkedin=linkedin)
 
  
-app.run(debug=True)
+app.run(debug=False,host='0.0.0.0')
 
 #line 53 in design1 me venv/static/images/{{img}} krna tha but aese hi chl rha 
