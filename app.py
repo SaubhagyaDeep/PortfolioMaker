@@ -51,9 +51,9 @@ def upload():
         key=uuid.uuid1()
         #single image uploading method
         img=request.files['dp']
-        img.save(f"venv/static/images/{img.filename}")
+        img.save(f"static/images/{img.filename}")
         img_new_name= f"{key}{img.filename}"
-        os.rename(f"venv/static/images/{img.filename}",f"venv/static/images/{img_new_name}")
+        os.rename(f"static/images/{img.filename}",f"static/images/{img_new_name}")
     return render_template(design_name,img=img_new_name,dname = name,dlname = lastname,dsch = school, dcol = college,dph = phone,demail = email,ds1 = skill1,ds2 = skill2,ds3 =skill3,ds4 = skill4,dabout = about,dgit=git,dlinkedin=linkedin)
 
  
